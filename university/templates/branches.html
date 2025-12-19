@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/branches.css' %}?v=3">
+
+<div class="branches-bg">
+    <div class="branches-container">
+        <h2>Our Branches</h2>
+        <p class="info-text">Explore the academic departments and programs offered at our University.</p>
+
+       <ul class="branches-list">
+    <li><a href="{% url 'cse' %}">Computer Science & Engineering</a></li>
+    <li><a href="{% url 'it' %}">Information Technology</a></li>
+    <li><a href="{% url 'ece' %}">Electronics & Communication Engineering</a></li>
+    <li><a href="{% url 'eee' %}">Electrical & Electronics Engineering</a></li>
+    <li><a href="{% url 'mech' %}">Mechanical Engineering</a></li>
+</ul>
+
+    </div>
+</div>
+
+{% endblock %}

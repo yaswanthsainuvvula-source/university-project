@@ -1,0 +1,60 @@
+.branches-bg {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://upeswebsitecdn-prod-hphqfhc0b8h2ffhf.a02.azurefd.net/drupal-data/2024-10/be-vs-btech-which-is-better.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 110px;
+    position: relative;
+    color: white;
+}
+
+.branches-container {
+    width: 60%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+
+.branches-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.branches-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.branches-list li {
+    background: rgba(255,255,255,0.22);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+   
+}
+.branches-list a{
+    text-decoration: none;
+    color: rgb(8, 255, 202);
+}
+
+.branches-list li:hover {
+    background: rgba(255,255,255,0.32);
+    cursor: pointer;
+   
+}
+.branches-list a:hover{
+    text-decoration: underline;
+    color:rgb(153, 255, 0)
+}

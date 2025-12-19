@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{% static 'css/resultsearch.css' %}">
+</head>
+<body>
+    <div class="bgcontainer">
+    <div class="textContainer">
+    <h1>Student Result Portal</h1>
+    <form method="post" action="{% url 'get_result' %}">
+        {% csrf_token %}
+        Reg No: <input type="text" placeholder="Enter your register number" name="regno"><br><br>
+        <input type="submit" value="Search">
+    </form>
+    {{message}}
+    </div>
+    </div>
+</body>
+</html>

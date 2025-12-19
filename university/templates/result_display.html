@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Display Page</title>
+    <link rel="stylesheet" href="{% static 'css/result_display.css' %}">
+</head>
+<body>
+
+<div class="bg-container">
+<div class="result-box">
+
+    <h2>Student Result Sheet</h2>
+
+    <div class="student-info">
+        <p><b>Name:</b> {{student.name}}</p>
+        <p><b>Reg.No:</b> {{student.reg_no}}</p>
+        <p><b>Father Name:</b> {{student.father_Name}}</p>
+        <p><b>Branch:</b> {{student.branch}}</p>
+    </div>
+
+    <hr style="margin:18px 0;">
+
+    <h2>Marks Secured by {{student.name}}</h2>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Grade</th>
+            <th>Status</th>
+        </tr>
+
+        {% for m in marks_qs %}
+        <tr>
+            <td style="color: blueviolet;">{{m.subject}}</td>
+            <td>{{m.marks}}</td>
+            <td style="color: blueviolet;">
+                {% if m.marks >= 90 %}A
+                {% elif m.marks >= 80 %}B
+                {% elif m.marks >= 70 %}C
+                {% elif m.marks >= 60 %}D
+                {% elif m.marks >= 35 %}E
+                {% else %}F
+                {% endif %}
+            </td>
+            <td>
+                {% if m.marks >= 35 %}
+                PASS
+                {% else %}
+                FAIL
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="summary">
+        <p><b>Total:</b> {{SecuredScore}} / {{totalMarks}}</p>
+        <p><b>Percentage:</b> {{percentage}}%</p>
+        <p><b>Overall Grade:</b> {{grade}}</p>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>

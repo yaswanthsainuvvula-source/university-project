@@ -1,0 +1,79 @@
+.image-holder {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://image-static.collegedunia.com/public/reviewPhotos/1103537/1000010964.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 110px;
+    position: relative;
+    color: white;
+}
+
+.contact-container {
+    width: 60%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+    color: rgb(8, 227, 23);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: aqua;
+}
+
+.info-text {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 22px;
+    color: rgb(9, 232, 131);
+}
+
+.contact-details p {
+    font-size: 19px;
+    margin: 6px 0;
+}
+
+.form-box {
+    margin-top: 25px;
+}
+
+.form-box h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-box input,
+.form-box textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.form-box button {
+    padding: 12px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(220, 66, 10);
+    color: white;
+}
+
+.form-box button:hover {
+    background-color: rgb(184, 49, 3);
+}
