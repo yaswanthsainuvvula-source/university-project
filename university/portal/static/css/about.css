@@ -1,43 +1,201 @@
-.container {
+:root {
+    --primary: #7c7cff;
+    --secondary: #b983ff;
+    --bg-dark: #0b0d17;
+    --card-bg: #111427;
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --border-soft: rgba(255,255,255,0.08);
+}
+
+
+.about-wrapper {
+    padding: 120px 6% 80px;
+    max-width: 1400px;
+    margin: auto;
+    background: radial-gradient(
+        circle at top,
+        rgba(124,124,255,0.15),
+        transparent 60%
+    );
+}
+
+
+.about-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-header h1 {
+    font-size: 3.8rem;
+    font-family: 'Syne', sans-serif;
+    background: linear-gradient(90deg, #fff, #b5b8ff);
+    background-clip: text;         
+    -webkit-background-clip: text; 
+    color: transparent;
+    margin-bottom: 15px;
+}
+
+
+.about-header p {
+    max-width: 620px;
+    margin: auto;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+
+.bento-item {
+    grid-column: span 4;
+    min-height: 220px;
+
     background: linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)
-    ), url('https://www.timeshighereducation.com/cms-academic/sites/default/files/styles/profile_gallery_image/public/2024-10/Dental%20Library.jpeg?itok=uDdYyUDL');
-    background-size: cover;
-    background-position: center;
-    min-height: auto;
-    padding: 110px 40px 90px; 
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+    );
+    border: 1px solid var(--border-soft);
+    border-radius: 28px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: 
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.bento-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(124,124,255,0.4),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bento-item i {
+    font-size: 2.2rem;
+    color: var(--primary);
+}
+
+
+.bento-item h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    color: var(--text-main);
+}
+
+.bento-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+
+.tall {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 6;
+}
+
+.mini {
+    min-height: 120px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    background: linear-gradient(
+        135deg,
+        rgba(124,124,255,0.15),
+        rgba(185,131,255,0.15)
+    );
+}
+
+
+.gradient-bg {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
     color: white;
 }
 
-
-.about-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 25px;
+.gradient-bg i,
+.gradient-bg p,
+.gradient-bg h3 {
+    color: white;
 }
 
-.about-list {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    width: 40%;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 12px;
-}
-
-.about-list li {
-    margin: 12px 0;
-    padding: 10px;
-    border-bottom: 1px solid white;
-    cursor: pointer;
-}
-.about-list li:last-child {
-    border-bottom: none;
+.flex-content {
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
 
 
-.about-list li:hover {
-    background: rgba(255, 255, 255, 0.15);
+.bento-item:hover {
+    transform: translateY(-10px);
+    border-color: rgba(124,124,255,0.6);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+.bento-item:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .bento-item {
+        grid-column: span 6;
+    }
+    .tall,
+    .wide {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-header h1 {
+        font-size: 2.6rem;
+    }
+    .bento-item {
+        grid-column: span 12;
+    }
 }

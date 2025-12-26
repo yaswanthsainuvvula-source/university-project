@@ -1,53 +1,124 @@
-* {
+/* =========================
+   PAGE BACKGROUND
+========================= */
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        180deg,
+        #0f172a,
+        #020617
+    );
+    min-height: 100vh;
 }
 
+/* =========================
+   CENTER CONTAINER
+========================= */
 .bgcontainer {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://www.niagara.edu/wp-content/uploads/2024/12/homepage-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
+/* =========================
+   BOX
+========================= */
 .textContainer {
-    background:linear-gradient(rgba(237, 233, 233, 0.363),rgba(240, 233, 233, 0.407));
-    width:400px;
-    height:200px;
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 40px 36px;
+    border-radius: 10px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
     text-align: center;
-    color: white;
-    border-radius: 12px;
-    padding:12px;
 }
 
+/* =========================
+   HEADER
+========================= */
 .textContainer h1 {
-    margin-bottom: 20px;
-    color: rgb(0, 255, 34);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #111827;
+    letter-spacing: 0.5px;
 }
 
-input[type="text"] {
-    padding: 10px;
-    width: 260px;
-    border-radius: 5px;
-    border: none;
+/* =========================
+   FORM
+========================= */
+form {
+    text-align: left;
+}
+
+/* Label text */
+form label,
+form span {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+/* =========================
+   INPUT
+========================= */
+form input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
     outline: none;
+    margin-top: 8px;
+    transition: border-color 0.3s ease;
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: orange;
+form input[type="text"]:focus {
+    border-color: #2563eb;
+}
+
+/* =========================
+   BUTTON
+========================= */
+form input[type="submit"] {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: #2563eb;
     border: none;
-    border-radius: 5px;
+    color: #ffffff;
+    border-radius: 6px;
     cursor: pointer;
-    color: white;
-    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: rgb(207, 114, 0);
+form input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   MESSAGE (ERROR / INFO)
+========================= */
+.textContainer p,
+.textContainer span,
+.textContainer div {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #dc2626;
+    text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .textContainer {
+        padding: 30px 24px;
+    }
+
+    .textContainer h1 {
+        font-size: 1.5rem;
+    }
 }

@@ -1,79 +1,149 @@
+/* =========================
+   BASE
+========================= */
 .image-holder {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://image-static.collegedunia.com/public/reviewPhotos/1103537/1000010964.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    padding-top: 110px;
-    position: relative;
-    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 6% 80px;
+    background: linear-gradient(
+        135deg,
+        #f8fafc,
+        #eef2ff
+    );
 }
 
+/* =========================
+   CONTAINER
+========================= */
 .contact-container {
-    width: 60%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.18);
-    padding: 25px;
-    border-radius: 8px;
-    backdrop-filter: blur(3px);
-    color: rgb(8, 227, 23);
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 60px 60px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.08);
 }
 
+/* =========================
+   HEADER
+========================= */
 .contact-container h2 {
-    text-align: center;
-    font-size: 32px;
+    font-size: 2.8rem;
+    font-family: 'Syne', sans-serif;
+    color: #111827;
     margin-bottom: 10px;
-    color: aqua;
 }
 
 .info-text {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 22px;
-    color: rgb(9, 232, 131);
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+.contact-details {
+    background: #f9fafb;
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 50px;
 }
 
 .contact-details p {
-    font-size: 19px;
-    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #374151;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-.form-box {
-    margin-top: 25px;
+.contact-details b {
+    color: #111827;
 }
 
+/* =========================
+   FORM BOX
+========================= */
 .form-box h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-family: 'Syne', sans-serif;
+    margin-bottom: 20px;
+    color: #111827;
 }
 
 .form-box form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    gap: 18px;
 }
 
+/* =========================
+   INPUTS
+========================= */
 .form-box input,
 .form-box textarea {
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    font-family: inherit;
     outline: none;
+    background: #ffffff;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+.form-box textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Focus */
+.form-box input:focus,
+.form-box textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* =========================
+   BUTTON
+========================= */
 .form-box button {
-    padding: 12px;
-    font-size: 20px;
+    align-self: flex-start;
+    padding: 12px 28px;
+    border-radius: 999px;
     border: none;
-    border-radius: 6px;
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6
+    );
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
     cursor: pointer;
-    background-color: rgb(220, 66, 10);
-    color: white;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .form-box button:hover {
-    background-color: rgb(184, 49, 3);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(99,102,241,0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 40px 28px;
+    }
+
+    .contact-container h2 {
+        font-size: 2.3rem;
+    }
 }

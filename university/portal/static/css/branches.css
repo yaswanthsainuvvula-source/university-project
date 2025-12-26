@@ -1,60 +1,110 @@
+/* =========================
+   RESET / BASE
+========================= */
 .branches-bg {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://upeswebsitecdn-prod-hphqfhc0b8h2ffhf.a02.azurefd.net/drupal-data/2024-10/be-vs-btech-which-is-better.webp');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    padding-top: 110px;
-    position: relative;
-    color: white;
+    min-height: 100vh;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 6% 80px;
 }
 
+/* =========================
+   CONTAINER
+========================= */
 .branches-container {
-    width: 60%;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.18);
-    padding: 25px;
-    border-radius: 8px;
-    backdrop-filter: blur(3px);
+    max-width: 720px;
+    width: 100%;
 }
 
+/* =========================
+   HEADER
+========================= */
 .branches-container h2 {
-    text-align: center;
-    font-size: 32px;
+    font-size: 2.8rem;
+    font-family: 'Syne', sans-serif;
+    color: #111827;
     margin-bottom: 10px;
 }
 
 .info-text {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 50px;
+    max-width: 520px;
 }
 
+/* =========================
+   LIST
+========================= */
 .branches-list {
     list-style: none;
     padding: 0;
-    font-size: 20px;
+    margin: 0;
+    border-top: 1px solid #e5e7eb;
 }
 
+/* =========================
+   LIST ITEM
+========================= */
 .branches-list li {
-    background: rgba(255,255,255,0.22);
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
-   
-}
-.branches-list a{
-    text-decoration: none;
-    color: rgb(8, 255, 202);
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.branches-list li:hover {
-    background: rgba(255,255,255,0.32);
-    cursor: pointer;
-   
+/* =========================
+   LINK
+========================= */
+.branches-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 10px;
+    text-decoration: none;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #111827;
+
+    transition: 
+        padding-left 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
 }
-.branches-list a:hover{
-    text-decoration: underline;
-    color:rgb(153, 255, 0)
+
+/* Arrow */
+.branches-list a::after {
+    content: "→";
+    font-size: 1.2rem;
+    color: #9ca3af;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   HOVER (SUBTLE)
+========================= */
+.branches-list a:hover {
+    padding-left: 18px;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.branches-list a:hover::after {
+    transform: translateX(6px);
+    color: #111827;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 640px) {
+    .branches-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .branches-list a {
+        font-size: 1rem;
+        padding: 18px 6px;
+    }
 }

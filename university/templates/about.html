@@ -2,28 +2,57 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}?v=2">
 
-<div class="container">
-    <h2 class="about-title">About Sections</h2>
-    <ul class="about-list">
-        <li>Introduction</li>
-        <li>Vision</li>
-        <li>Mission</li>
-        <li>Objectives</li>
-        <li>History of the University</li>
-        <li>Accreditations & Approvals</li>
-        <li>Governance & Leadership</li>
-        <li>Chancellor / Vice-Chancellor Message</li>
-        <li>Awards & Achievements</li>
-        <li>Infrastructure & Facilities</li>
-        <li>Placements & Industry Partnerships</li>
-        <li>Research & Innovation</li>
-        <li>National & International Collaborations</li>
-        <li>Student Support & Services</li>
-        <li>Alumni Association</li>
-        <li>Rules & Regulations</li>
-    </ul>
+<div class="about-wrapper">
+    <header class="about-header">
+        <span class="badge">Institutional Profile</span>
+        <h1 class="gradient-text">Our Legacy & Future</h1>
+        <p>Discover the pillars that define our commitment to academic excellence.</p>
+    </header>
+
+    <div class="bento-grid">
+        <div class="bento-item tall gradient-bg">
+            <i class="fa-solid fa-university"></i>
+            <h3>History of the University</h3>
+            <p>A journey through time, from our founding roots to becoming a global leader in education.</p>
+        </div>
+
+        <div class="bento-item">
+            <i class="fa-solid fa-eye"></i>
+            <h3>Vision & Mission</h3>
+            <p>Defining the horizon of innovation and our daily commitment to student success.</p>
+        </div>
+
+        <div class="bento-item wide glass">
+            <div class="flex-content">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h3>Governance & Leadership</h3>
+                    <p>Guided by visionary leaders including our Chancellor & Vice-Chancellor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-item glass">
+            <i class="fa-solid fa-microscope"></i>
+            <h3>Research & Innovation</h3>
+        </div>
+
+        <div class="bento-item glass">
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Industry Partnerships</h3>
+        </div>
+
+        <div class="bento-item wide glass">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Infrastructure & World-Class Facilities</h3>
+        </div>
+
+        <div class="bento-item mini glass"><h3>Alumni</h3></div>
+        <div class="bento-item mini glass"><h3>Awards</h3></div>
+        <div class="bento-item mini glass"><h3>Approvals</h3></div>
+        <div class="bento-item mini glass"><h3>Rules</h3></div>
+    </div>
 </div>
-
 {% endblock %}

@@ -4,42 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-
+    <title>University Portal | Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}?v=1">
 </head>
 <body>
-    <div class="navbar">
-        <h2>University Portal</h2>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
 
-        <div class="info">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'contact' %}">Contact Us</a>
-            <a href="{% url 'branches' %}">Branches</a>
-            <a href="{% url 'resultpage' %}">Results</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">U</div>
+                <span>Uni<b>Portal</b></span>
+            </div>
+            <div class="nav-links">
+                <a href="{% url 'index' %}" class="active">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'branches' %}">Branches</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'resultpage' %}" class="nav-cta">View Results</a>
+            </div>
         </div>
-    </div>
-    {% block content %}
-    
-    <div class="img-container">
-<div class="text">
-    <h1>Welcome to University Portal</h1>
-    <p class="subtitle">A place where learning meets excellence</p>
-    </div>
-    </div>
+    </nav>
 
-    {% endblock %}
-   <footer>
-    <p>&copy; 2025 University Portal. All Rights Reserved </p>
+    <main>
+        {% block content %}
+        <section class="hero-section">
+            <div class="hero-card">
+                <span class="badge">Registration Open 2025</span>
+                <h1>Empowering the <span class="gradient-text">Next Generation</span></h1>
+                <p>Access your academic journey with a seamless, world-class digital experience. Innovation starts here.</p>
+                <div class="hero-actions">
+                    <button class="btn-glow">Explore Campus</button>
+                    <button class="btn-outline">Watch Video <i class="fa-solid fa-play"></i></button>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
 
-    <div class="social-icons">
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-    </div>
-</footer>
-
+    <footer>
+        <div class="footer-blur">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>UniPortal</h3>
+                    <p>Defining the future of education through digital excellence.</p>
+                </div>
+                <div class="social-wrapper">
+                    <a href="#" class="social-glass"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-glass"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-glass"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 University Portal. Designed for Excellence.</p>
+        </div>
+    </footer>
 </body>
 </html>
